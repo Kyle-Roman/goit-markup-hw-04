@@ -8,6 +8,7 @@
   --background-color-main: #f5f4fa;
   --background-color-accent: #2f303a;
   --logo-text-main: #000000;
+  --social-logo: #afb1b8;
   --section-pt: 94px;
   --section-pb: 94px;
 }
@@ -119,6 +120,42 @@ img {
   padding-right: 15px;
 }
 
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--accent-text-color);
+}
+
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list-icon {
+  fill: var(--social-logo);
+  width: 20px;
+  height: 20px;
+}
+
 /* ================ END COMPONENTS ================*/
 
 /* ================ HEADER ================*/
@@ -171,12 +208,45 @@ img {
 }
 
 .header-contacts {
+  display: flex;
   margin-left: auto;
+  align-items: center;
+}
+
+.header-contacts-mail {
+  display: flex;
+  align-items: center;
+  min-width: 161px;
+}
+
+.header-contacts-mail::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  color: #757575;
 }
 
 .header-contact-link {
+  display: flex;
+  align-items: center;
   color: var(--secondary-text-color);
+  flex-direction: row-reverse;
 }
+
+.header-contacts-logo {
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+/* .header-contacts-link::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+} */
 
 .header-contact-link:hover,
 .header-contact-link:focus {
@@ -192,8 +262,15 @@ img {
 /* ================ HERO ================*/
 
 .hero {
-  background-color: var(--background-color-accent);
+  background-color: #c4c4c4;
   text-align: center;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero .container {
@@ -246,6 +323,14 @@ img {
   font-weight: 400;
   line-height: 1.71;
   color: var(--secondary-text-color);
+}
+
+.specialties-logo {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-color-main);
 }
 /* ================ END SPECIALTIES ================*/
 
@@ -326,6 +411,7 @@ img {
 }
 
 .team-occupation {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -336,6 +422,7 @@ img {
   width: 270px;
   height: 260px;
 }
+
 /* ================ END TEAM ================*/
 
 /* ================ EXAMPLES ================*/
