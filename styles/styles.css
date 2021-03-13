@@ -185,26 +185,8 @@ img {
   align-items: center;
 }
 
-.nav-list {
-  display: flex;
-}
-
-.nav-item:not(:last-child) {
-  display: flex;
-  margin-right: 50px;
-}
-
-.nav-link {
-  text-decoration: none;
-  line-height: 1.17;
-  color: var(--main-text-color);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color);
-}
 .logo {
+  display: inline-block;
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -217,17 +199,52 @@ img {
   color: var(--logo-text-main);
 }
 
+.nav-wrapper {
+  display: block;
+}
+
+.contact-wrapper {
+  display: block;
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-link {
+  line-height: 1.17;
+  color: var(--main-text-color);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
 .header-contacts {
   display: flex;
-  /* margin-left: auto; */
+  margin-left: 0 auto;
   align-items: center;
 }
 
 .header-contacts-mail {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  /* min-width: 161px; */
+  display: inline-block;
+  margin-right: 30px;
+  fill: var(--secondary-text-color);
+}
+
+.header-contacts-tel {
+  display: inline-block;
+  fill: var(--secondary-text-color);
 }
 
 .header-contact-link {
@@ -243,30 +260,17 @@ img {
   color: var(--accent-color);
 }
 
-.header-contacts-mail {
-  display: inline-block;
+.header-envelope {
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: var(--secondary-text-color);
 }
 
-.header-contacts-tel {
-  display: inline-block;
+.header-tel {
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: var(--secondary-text-color);
 }
-/* .header-contacts-logo:hover,
-.header-contacts-logo:focus {
-  fill: var(--accent-color);
-} */
-
-.header-contacts-mail {
-  margin-right: 30px;
-}
-
 /* ================ END HEADER ================*/
 
 /* ================ HERO ================*/
